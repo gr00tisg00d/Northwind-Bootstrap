@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northwind</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="bootstrap.lux.min.css" rel="stylesheet">
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- bootstrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
+        defer></script>
+    <!-- client css -->
+    <link rel="stylesheet" href="client.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="bg-primary">
+    <nav class="navbar navbar-expand-md bg-light fade-up delay-0">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="bi bi-compass"></i> Northwind</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 gap-2">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-box"></i> Products
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-list-columns"></i> Browse
+                                    Categories</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-search"></i> Product Search</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-coin"></i> Current Discounts</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-people-fill"></i> Customers
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-plus-lg"></i> Register</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-bar-right"></i> Sign In</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <form class="d-none d-md-flex ms-md-3" role="search">
+                    <div class="input-group">
+                        <span class="input-group-text bg-transparent border-end-0 text-secondary">
+                            <i class="bi bi-search"></i>
+                        </span>
+                        <input class="form-control border-start-0" type="search" placeholder="Search"
+                            aria-label="Search">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero -->
+    <section class="hero bg-body-tertiary">
+        <div class="container py-5 py-md-6">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8 text-center">
+                    <h1 class="display-4 fw-bold mb-3 fade-up delay-0">Northwind</h1>
+                    <p class="text-secondary mb-4 fade-up delay-1">We have the best prices and selection of high quality
+                        foods &
+                        beverages on the planet! Check out our featured discounts below.</p>
+                </div>
+                <div class="d-flex gap-2 justify-content-center fade-up delay-2">
+                    <a class="btn btn-primary btn-md hoverFX heroPrimary" href="#">Browse Products</a>
+                    <a class="btn btn-outline-primary btn-md" href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Extra Content -->
+    <main class="container d-flex flex-column align-items-center gap-3">
+        <h2 class="section-title text-start my-5 fade-up delay-0">Featured</h2>
+        <!-- Almas Caviar -->
+        <div class="card mb-3 user-select-none fade-up delay-0" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-4">
+                    <img class="img-fluid rounded-start image-adjustments image-filter-mono image-color-on-hover"
+                        src="/caviar.jpg" alt="Almas Caviar" />
+                </div>
+                <div class="col-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Almas Caviar</h5>
+                        <p class="card-text">Sourced from rare albino Iranian Beluga sturgeons.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Kobe Beef -->
+        <div class="card mb-3 user-select-none fade-up delay-1" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-4">
+                    <img class="img-fluid rounded-start image-adjustments image-filter-highcontrast image-color-on-hover"
+                        src="/kobebeef.jpg" alt="Kobe Beef" />
+                </div>
+                <div class="col-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Kobe Beef</h5>
+                        <p class="card-text">A highly regulated form of Japanese Wagyu derived from Tajima cattle raised
+                            in Hyogo Prefecture.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Tuna Belly -->
+        <div class="card mb-3 user-select-none fade-up delay-2" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-4">
+                    <img class="img-fluid rounded-start image-adjustments image-filter-cool image-color-on-hover"
+                        src="/tuna.jpg" alt="Bluefin Tuna Belly (Otoro)" />
+                </div>
+                <div class="col-8">
+                    <div class="card-body">
+                        <h5 class="card-title">bluefin Tuna Belly (otoro)</h5>
+                        <p class="card-text">known for its rich, buttery flavor, melt-in-your-mouth texture, and pink to
+                            white color with extensive marbling.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

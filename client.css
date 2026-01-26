@@ -1,0 +1,143 @@
+html,
+body {
+	font-family:
+		'Inter',
+		system-ui,
+		-apple-system,
+		'Segoe UI',
+		Roboto,
+		'Helvetica Neue',
+		Arial,
+		'Noto Sans',
+		'Liberation Sans',
+		sans-serif;
+	line-height: 1.6;
+	box-sizing: border-box;
+}
+
+.hero {
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0));
+}
+.hero h1 {
+	letter-spacing: -0.02rem;
+}
+
+.hoverFX:hover {
+	background-color: transparent;
+	color: var(--bs-primary);
+	box-shadow: inset 0 0 0 2px var(--bs-primary);
+}
+
+.hoverFX {
+	transition: 0.2s ease;
+}
+
+.dropdown-item {
+	margin-top: 0.4rem;
+}
+
+/* Base image adjustments (already present) */
+.image-adjustments {
+	object-fit: cover;
+	object-position: center;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+	/* Default: soft monochrome feel while keeping color */
+	filter: grayscale(0.15) saturate(0.85) contrast(1.12) brightness(0.96);
+	transition: filter 0.2s ease;
+}
+
+/* Presets: pick one by adding the class alongside .image-adjustments */
+.image-filter-soft {
+	filter: saturate(0.85) contrast(1.08) brightness(0.98);
+}
+
+.image-filter-mono {
+	filter: grayscale(0.2) saturate(0.8) contrast(1.15) brightness(0.95);
+}
+
+.image-filter-highcontrast {
+	filter: saturate(0.6) contrast(1.25) brightness(0.92);
+}
+
+.image-filter-cool {
+	filter: hue-rotate(-8deg) saturate(0.75) contrast(1.12) brightness(0.97);
+}
+
+.image-filter-warm {
+	filter: sepia(0.05) saturate(0.8) contrast(1.1) brightness(0.97);
+}
+
+/* Optional: restore full color on hover/focus for interactivity */
+.image-color-on-hover:hover,
+.image-color-on-hover:focus-visible {
+	filter: none;
+}
+
+/* Fancy section heading */
+.section-title {
+	font-weight: 400;
+	/* responsive, smaller than display-4 */
+	font-size: clamp(1.5rem, 1.2rem + 2vw, 2.25rem);
+	letter-spacing: 0.02em;
+	color: rgba(255, 255, 255, 0.863);
+	margin: 0;
+}
+.section-title::after {
+	content: '';
+	display: block;
+	width: 180px;
+	height: 2px;
+	margin: 0.75rem auto 0;
+	background: linear-gradient(
+		to right,
+		rgba(255, 255, 255, 0),
+		rgba(255, 255, 255, 0.6),
+		rgba(255, 255, 255, 0)
+	);
+	border-radius: 2px;
+}
+/* Alt: left-aligned version */
+.section-title.text-start::after {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+/* Fade-up on load */
+@keyframes fade-up {
+	from {
+		opacity: 0;
+		transform: translateY(12px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.fade-up {
+	opacity: 0;
+	transform: translateY(12px);
+	animation: fade-up 600ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.fade-up.delay-0 {
+	animation-delay: 0ms;
+}
+.fade-up.delay-1 {
+	animation-delay: 120ms;
+}
+.fade-up.delay-2 {
+	animation-delay: 240ms;
+}
+.fade-up.delay-3 {
+	animation-delay: 360ms;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	.fade-up {
+		opacity: 1;
+		transform: none;
+		animation: none;
+	}
+}
