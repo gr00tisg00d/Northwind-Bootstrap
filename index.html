@@ -19,6 +19,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
         defer></script>
+    <!-- client js -->
+    <script src="discount.js"></script>
     <!-- client css -->
     <link rel="stylesheet" href="client.css" />
     <!-- Google Fonts -->
@@ -31,7 +33,7 @@
 <body class="bg-primary">
     <nav class="navbar navbar-expand-md bg-light fade-up delay-0">
         <div class="container">
-            <a class="navbar-brand" href="#"><i class="bi bi-compass"></i> Northwind</a>
+            <a class="navbar-brand" href="#"><i class="bi bi-compass"></i>Northwind</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                 aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,61 +91,58 @@
                         foods &
                         beverages on the planet! Check out our featured discounts below.</p>
                 </div>
-                <div class="d-flex gap-2 justify-content-center fade-up delay-2">
-                    <a class="btn btn-primary btn-md hoverFX heroPrimary" href="#">Browse Products</a>
-                    <a class="btn btn-outline-primary btn-md" href="#">Learn More</a>
+                <div class="row justify-content-center fade-up delay-2 gap-2">
+                    <a class="btn btn-primary btn-md hoverFX heroPrimary col" href="#">Browse Products</a>
+                    <a class="btn btn-outline-primary btn-md col" href="#">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Extra Content -->
-    <main class="container d-flex flex-column align-items-center gap-3">
-        <h2 class="section-title text-start my-5 fade-up delay-0">Featured</h2>
-        <!-- Almas Caviar -->
-        <div class="card mb-3 user-select-none fade-up delay-0" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-4">
-                    <img class="img-fluid rounded-start image-adjustments image-filter-mono image-color-on-hover"
-                        src="/caviar.jpg" alt="Almas Caviar" />
+    <main class="text-white">
+        <div class="row p-2 m-2 text-white" id="discount-row">
+            <div class="col px-2 py-4">
+                <h3 class="text-white">Tis the seasoning</h3>
+                <div class="mb-4">
+                    Order today! Save 12.5% on Chef Anton's Italian Seasoning.
+                    You don't want to make Chef Anton mad, do you?
                 </div>
-                <div class="col-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Almas Caviar</h5>
-                        <p class="card-text">Sourced from rare albino Iranian Beluga sturgeons.</p>
-                    </div>
+                <i>Discount expires: 2/25/2025</i><br />
+                <i class="bi bi-receipt"></i> <a href="#" class="discount text-white-50"
+                    data-product="Chef Anton's Italian Seasoning" data-title="Tis the seasoning"
+                    data-code="1324">Discount Code</a>
+            </div>
+            <div class="col px-2 py-4">
+                <h3 class="text-white">New Years Special</h3>
+                <div class="mb-4">
+                    NEW YEAR, NEW DIET. ALL YOU CAN NOT EAT! SELLING LESS FOR MORE!
                 </div>
+                <i>Discount expires: 1/1/3000</i><br />
+                <i class="bi bi-receipt"></i> <a href="#" class="discount text-white-50" data-product="Less for More"
+                    data-title="New Years Special" data-code="8918">Discount Code</a>
+            </div>
+            <div class="col px-2 py-4">
+                <h3 class="text-white">UK SALE</h3>
+                <div class="mb-4">
+                    FISH AND CHIPS | BEANS ON TOAST | ALL YOU CAN EAT CRUMPETS!
+                </div>
+                <i>Discount expires: 3/26/2102</i><br />
+                <i class="bi bi-receipt"></i> <a href="#" class="discount text-white-50" data-product="BEANSONTOAST"
+                    data-title="UKSPECIAL" data-code="2121">Discount Code</a>
             </div>
         </div>
-        <!-- Kobe Beef -->
-        <div class="card mb-3 user-select-none fade-up delay-1" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-4">
-                    <img class="img-fluid rounded-start image-adjustments image-filter-highcontrast image-color-on-hover"
-                        src="/kobebeef.jpg" alt="Kobe Beef" />
+        <!-- toast -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3 text-primary">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+                data-bs-autohide="false">
+                <div class="toast-header">
+                    <strong class="me-auto" id="product">Product</strong>
+                    <small class="text-body-secondary" id="dTitle">discount title</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
                 </div>
-                <div class="col-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Kobe Beef</h5>
-                        <p class="card-text">A highly regulated form of Japanese Wagyu derived from Tajima cattle raised
-                            in Hyogo Prefecture.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Tuna Belly -->
-        <div class="card mb-3 user-select-none fade-up delay-2" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-4">
-                    <img class="img-fluid rounded-start image-adjustments image-filter-cool image-color-on-hover"
-                        src="/tuna.jpg" alt="Bluefin Tuna Belly (Otoro)" />
-                </div>
-                <div class="col-8">
-                    <div class="card-body">
-                        <h5 class="card-title">bluefin Tuna Belly (otoro)</h5>
-                        <p class="card-text">known for its rich, buttery flavor, melt-in-your-mouth texture, and pink to
-                            white color with extensive marbling.</p>
-                    </div>
+                <div class="toast-body" id="dCode">
+                    Discount Code: 1234
                 </div>
             </div>
         </div>
