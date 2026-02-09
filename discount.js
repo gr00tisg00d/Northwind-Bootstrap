@@ -20,5 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (e.key === 'Escape') {
             bootstrap.Toast.getOrCreateInstance(document.getElementById('liveToast')).hide();
         }
-    })
+    });
+
 });
